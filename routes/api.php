@@ -17,6 +17,5 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
-Route::post('/get-data', 'HomeController@getData');
 Route::post('/download-pdf', 'HomeController@downloadPdf');
 Route::post('/download-doc', 'HomeController@downloadDoc');

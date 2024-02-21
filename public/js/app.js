@@ -1919,21 +1919,29 @@ __webpack_require__.r(__webpack_exports__);
     return {
       values: null,
       options: ['Vue.js', 'Vue-Multiselect', 'Vuelidate'],
-      records: null
+      records: null,
+      data: [{
+        "name": "Vue.js",
+        "about": "Vue.js is an open-source model–view–viewmodel front end JavaScript library for building user interfaces and single-page applications. It was created by Evan You, and is maintained by him and the rest of the active core team members"
+      }, {
+        "name": "Vue-Multiselect",
+        "about": "Vue-Multiselect is a very flexible dropdown component to let us create dropdowns that can have pictures and dropdown items with formatting. We can also group dropdown options and enable multiple selections and tagging. It has integration with Vuex allows us to get and set options and values from the store"
+      }, {
+        "name": "Vuelidate",
+        "about": "Vuelidate 2 is a simple, but powerful, lightweight model-based validation for Vue.js 3 and 2. Vuelidate is considered model-based because the validation rules are defined next to your data, and the validation tree structure matches the data model structure."
+      }]
     };
   },
   methods: {
     fetchData: function fetchData() {
       var _this = this;
-      axios.post('/api/get-data', {
-        'values': this.values
-      }).then(function (response) {
-        _this.records = response.data.data;
+      this.records = this.data.filter(function (item) {
+        return _this.values.includes(item.name);
       });
     },
     downloadDoc: function downloadDoc() {
       axios.post('/api/download-doc', {
-        'values': this.values
+        'data': this.records
       }, {
         responseType: 'blob'
       }).then(function (response) {
@@ -1961,7 +1969,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     downloadPdf: function downloadPdf() {
       axios.post('/api/download-pdf', {
-        'values': this.values
+        'data': this.records
       }, {
         responseType: 'blob'
       }).then(function (response) {
