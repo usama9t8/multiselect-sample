@@ -1,0 +1,32 @@
+/*Custom CSS*/
+.alert-top {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+.alert-top .close{
+	opacity: 1;
+}
+.position-relative {
+	position: relative;
+}
+.search-result-area {
+    position: absolute;
+    top: 5px;
+    padding: 20px 10px;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+}
+.search-result-area a {
+	color: #656565;
+	text-decoration: none;
+}
+.search-result-area a:hover {
+	color: #23b7e5;
+}
+.search-result-area .media {
+	margin-bottom: 15px;
+}
+.search-result-area .media-heading {
+	margin-bottom: 0;
+}
