@@ -13,6 +13,7 @@
       "DASHBOARD": "Dashboard",
       "WIDGETS": "Widgets",
       "DOCUMENTATION": "Documentation",
+      "MULTISELECT": "Multiselect",
       "element": {
         "ELEMENTS": "Elements",
         "BUTTON": "Button",

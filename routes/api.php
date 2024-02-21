@@ -13,6 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::post('/get-data', 'HomeController@getData');
+Route::post('/download-pdf', 'HomeController@downloadPdf');
+Route::post('/download-doc', 'HomeController@downloadDoc');

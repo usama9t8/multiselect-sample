@@ -850,6 +850,12 @@
                                 <span data-localize="sidebar.nav.DOCUMENTATION">Documentation</span>
                              </a>
                           </li>
+                          <li class=" ">
+                             <a href="/multi-select" title="Multiselect">
+                                <em class="icon-graduation"></em>
+                                <span data-localize="sidebar.nav.MULTISELECT">Multiselect</span>
+                             </a>
+                          </li>
                        </ul>
                        <!-- END sidebar nav-->
                     </nav>
